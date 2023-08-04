@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "challenge-notification"
+version = "0.1.0"
+description = ""
+authors = ["GreeN <xd383727@gamil.com>"]
+readme = "README.md"
+packages = [{include = "challenge_notification"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+celery = {extras = ["redis"], version = "^5.3.1"}
+redis = "^4.6.0"
+requests = "^2.31.0"
+motor = "^3.2.0"
+pydantic = "^2.1.1"
+
+
+[tool.poetry.group.test.dependencies]
+flake8 = "^6.1.0"
+httpx = "^0.24.1"
+pytest = "^7.4.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
