@@ -11,8 +11,7 @@ def request_api(url: str):
     return [item for item in request]
 
 
-@app.task
-def create_data_in_mongodb():
+def _create_data_in_mongodb():
      res = request_api("localhost:8080/get_notification")
      confi_db.db.values.insert_many([_data_for_mongo(i) for i in res])
      list_data = confi_db.db.values.find({})

@@ -1,4 +1,4 @@
-async def notification_entity(item) -> dict:
+def notification_entity(item) -> dict:
     return {
         "id": str(item['_id']),
         "day_week": item['day_week'],
@@ -9,6 +9,6 @@ async def notification_entity(item) -> dict:
     }
 
 
-async def notifications_entity(entity) -> list:
-    return [await notification_entity(item) for item in await entity.to_list(length=20)]
+def notifications_entity(entity) -> list:
+    return [notification_entity(item) for item in entity.to_list(length=20)]
 
