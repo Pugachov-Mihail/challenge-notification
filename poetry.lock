@@ -312,6 +312,19 @@ trio = ["trio (>=0.14,<0.23)"]
 wmi = ["wmi (>=1.5.1,<2.0.0)"]
 
 [[package]]
+name = "envparse"
+version = "0.2.0"
+description = "Simple environment variable parsing"
+optional = false
+python-versions = "*"
+files = [
+    {file = "envparse-0.2.0.tar.gz", hash = "sha256:4f3b9a27bb55d27f124eb4adf006fec05e4588891c9a054a183a112645056eb7"},
+]
+
+[package.extras]
+testing = ["pytest"]
+
+[[package]]
 name = "flake8"
 version = "6.1.0"
 description = "the modular source code checker: pep8 pyflakes and co"
@@ -917,4 +930,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "6387d9fe67811add8998f64b907ff86249e3b4999473dfcc36c6c67565079ec9"
+content-hash = "4b924993c8c28777cdcba9d56a2ecfb47246aac23ccc5fda825bf35d4b525d52"
