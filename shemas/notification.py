@@ -8,9 +8,6 @@ class Challenge(BaseModel):
     id: uuid.UUID
     user_id: uuid.UUID
 
-    class Config:
-        from_attributes = True
-
 
 class Notification(BaseModel):
     day_week: int
@@ -20,5 +17,4 @@ class Notification(BaseModel):
     time_end: time
     challenge: Challenge
 
-    class Config:
-        from_attributes = True
+
